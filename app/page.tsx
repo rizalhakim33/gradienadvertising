@@ -130,7 +130,7 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="bg-ink text-paper">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-24 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-8 sm:px-6 lg:grid-cols-2 lg:gap-14 lg:py-12 lg:px-8">
           <div>
             <p className="inline-flex items-center gap-2 border border-paper/20 px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-[0.25em] text-paper/80">
               <span className="h-2 w-2 bg-brand" aria-hidden="true" />
