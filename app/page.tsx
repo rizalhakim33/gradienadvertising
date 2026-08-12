@@ -170,17 +170,17 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
             <div className="absolute -left-4 -top-4 h-24 w-24 border-l-2 border-t-2 border-brand" aria-hidden="true" />
             <div className="absolute -bottom-4 -right-4 h-24 w-24 border-b-2 border-r-2 border-brand" aria-hidden="true" />
-            <div className="border border-paper/15">
+            <div className="border border-paper/15 bg-paper-dark/5 p-2">
               <Image
                 src="/images/hero.png"
                 alt="Contoh signage huruf timbul Gradien Advertising"
                 width={1024}
                 height={1024}
                 priority
-                className="h-auto w-full"
+                className="mx-auto h-auto max-h-[520px] w-full object-contain"
               />
             </div>
           </div>
