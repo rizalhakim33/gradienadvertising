@@ -20,10 +20,9 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "120+", label: "Proyek Selesai" },
-  { value: "92%", label: "Pelanggan Puas" },
-  { value: "87%", label: "Tujuan Tercapai" },
-  { value: "20+", label: "Tim Profesional" },
+  { value: "1000+", label: "Proyek Selesai" },
+  { value: "96%", label: "Pelanggan Puas" },
+  { value: "10+", label: "Tim Profesional" },
 ];
 
 const services = [
@@ -189,7 +188,7 @@ export default function HomePage() {
 
       {/* STATS */}
       <section className="border-b border-ink/10 bg-paper-dark">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-ink/10 px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 divide-x divide-ink/10 px-4 sm:px-6 lg:grid-cols-3 lg:px-8">
           {stats.map((stat) => (
             <div key={stat.label} className="px-2 py-10 text-center sm:px-6">
               <p className="font-display text-5xl font-bold uppercase text-brand sm:text-6xl">
