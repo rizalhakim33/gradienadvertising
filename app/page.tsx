@@ -114,9 +114,32 @@ const jsonLd = {
     addressRegion: "Jawa Barat",
     addressCountry: "ID",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: -6.9403,
+    longitude: 107.7103,
+  },
   areaServed: "Bandung dan sekitarnya",
   sameAs: [SITE.instagram, SITE.tiktok],
   priceRange: "$$",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "150",
+  },
+};
+
+const faqPageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
 };
 
 export default function HomePage() {
@@ -125,6 +148,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
       />
 
       {/* HERO */}

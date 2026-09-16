@@ -51,6 +51,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/logo.png",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jasa Signage Profesional di Bandung — Gradien",
+    description: SITE.description,
+    images: ["/images/og.jpg"],
+  },
 };
 
 export const viewport: Viewport = {
