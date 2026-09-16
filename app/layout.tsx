@@ -22,8 +22,8 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Jasa Signage & Reklame Profesional di Bandung — Gradien Advertising",
-    template: "%s — Gradien Advertising",
+    default: "Jasa Signage Profesional di Bandung — Gradien",
+    template: "%s — Gradien",
   },
   description: SITE.description,
   keywords: [
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "id_ID",
     siteName: SITE.name,
-    title: "Jasa Signage & Reklame Profesional di Bandung — Gradien Advertising",
+    title: "Jasa Signage Profesional di Bandung — Gradien",
     description: SITE.description,
     url: SITE.url,
-    images: [{ url: "/images/hero.png", width: 1200, height: 900, alt: "Gradien Advertising" }],
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "Gradien Advertising - Jasa Signage Bandung" }],
   },
   icons: {
     icon: "/images/logo.png",

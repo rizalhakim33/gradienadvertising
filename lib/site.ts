@@ -2,7 +2,7 @@ export const SITE = {
   name: "Gradien Advertising",
   tagline: "Sekali Lihat, Langsung Ingat",
   description:
-    "Jasa desain, produksi, dan instalasi signage profesional di Bandung. Huruf timbul, neon box, neon sign, signage toko, dan billboard dengan pengalaman lebih dari 15 tahun.",
+    "Jasa signage profesional di Bandung: huruf timbul, neon box, neon sign, dan billboard. Pengalaman 15+ tahun.",
   url: "https://gradienadvertising.com",
   phoneDisplay: "+62 812-2338-8546",
   phoneWaLegacy: "6281223388546",
