@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { services } from "@/lib/services";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
 import { ArrowRightIcon } from "@/components/icons";
@@ -10,54 +11,6 @@ export const metadata: Metadata = {
   description:
     "Layanan signage profesional: huruf timbul, neon box, neon sign, signage toko, dan billboard di Bandung. Desain custom sesuai brand Anda.",
 };
-
-const services = [
-  {
-    no: "01",
-    title: "Huruf Timbul",
-    desc: "Huruf timbul kami dirancang untuk memberikan dampak visual yang kuat, meningkatkan visibilitas brand Anda. Terbuat dari material berkualitas tinggi, huruf ini tahan lama dan mudah dipasang di berbagai tempat.",
-    src: "/images/hero.png",
-    width: 1024,
-    height: 1024,
-    alt: "Huruf timbul elegan untuk toko dan kantor",
-  },
-  {
-    no: "02",
-    title: "Neon Box",
-    desc: "Neon box kami menawarkan pencahayaan yang mencolok, sempurna untuk menarik perhatian di malam hari. Desain kustom dapat disesuaikan dengan logo atau tema bisnis Anda, menghadirkan identitas brand yang kuat.",
-    src: "/images/neonbox.png",
-    width: 1024,
-    height: 1024,
-    alt: "Neon box akrilik outdoor tahan cuaca",
-  },
-  {
-    no: "03",
-    title: "Neon Sign",
-    desc: "Neon sign cocok digunakan sebagai elemen branding maupun dekorasi interior kafe, restoran, atau ruang komersial. Mampu menarik perhatian sekaligus menciptakan suasana estetik dan berkarakter tanpa mengubah identitas desain aslinya.",
-    src: "/images/neonsign.png",
-    width: 1024,
-    height: 1024,
-    alt: "Lampu neon tulisan custom sebagai elemen branding interior",
-  },
-  {
-    no: "04",
-    title: "Signage Toko",
-    desc: "Signage toko adalah identitas visual yang membantu usaha mudah dikenali dan terlihat profesional. Dengan desain dan pencahayaan yang tepat, signage mampu menarik perhatian serta memberi kesan pertama yang kuat kepada pelanggan.",
-    src: "/images/signage.jpg",
-    width: 1024,
-    height: 1024,
-    alt: "Papan signage toko yang profesional",
-  },
-  {
-    no: "05",
-    title: "Billboard",
-    desc: "Billboard kami dirancang untuk lokasi strategis dengan visibilitas tinggi. Dengan desain yang menarik dan material tahan cuaca, billboard memastikan pesan Anda terlihat oleh banyak orang, meningkatkan kesadaran brand secara signifikan.",
-    src: "/images/billboard.jpg",
-    width: 1024,
-    height: 683,
-    alt: "Billboard reklame di area strategis",
-  },
-];
 
 export default function ServicesPage() {
   return (
@@ -89,7 +42,7 @@ export default function ServicesPage() {
             const flip = i % 2 === 1;
             return (
               <div
-                key={service.no}
+                key={service.slug}
                 className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16"
               >
                 <div className={flip ? "lg:order-2" : ""}>
@@ -103,10 +56,10 @@ export default function ServicesPage() {
                     />
                     <div className="border border-ink/10 bg-paper-dark">
                       <Image
-                        src={service.src}
-                        alt={service.alt}
-                        width={service.width}
-                        height={service.height}
+                        src={service.image}
+                        alt={service.imageAlt}
+                        width={service.imageWidth}
+                        height={service.imageHeight}
                         className="h-auto w-full"
                         loading="lazy"
                       />
@@ -123,13 +76,13 @@ export default function ServicesPage() {
                     {service.title}
                   </h2>
                   <p className="mt-5 text-base leading-relaxed text-ink-soft sm:text-lg">
-                    {service.desc}
+                    {service.shortDesc}
                   </p>
                   <Link
-                    href="/contact"
+                    href={`/services/${service.slug}`}
                     className="mt-8 inline-flex items-center gap-3 bg-brand px-6 py-3.5 font-display text-lg font-semibold uppercase tracking-widest text-white transition-colors hover:bg-brand-dark"
                   >
-                    Hubungi Kami
+                    Selengkapnya
                     <ArrowRightIcon className="h-5 w-5" />
                   </Link>
                 </div>
